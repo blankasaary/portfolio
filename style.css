@@ -30,46 +30,4 @@ section {
   border-radius: 8px;
 }
 
-#contact h2 {
-  color: #0073e6;
-  text-align: center;
-}
 
-#contact ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-#contact ul li {
-  margin: 10px 0;
-}
-
-#contact a {
-  color: #0073e6;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* Projektek listája */
-#project-list {
-    list-style: none;
-    padding: 0;
-}
-
-    #project-list li {
-        background: #f4f4f4;
-        margin: 10px 0;
-        padding: 10px;
-        border-left: 4px solid #0073e6;
-    }
-
-/* Lábjegyzet */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #ddd;
-}
