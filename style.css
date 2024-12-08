@@ -1,33 +1,124 @@
-/* Alap stílusok */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Világos pasztell háttér */
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Fejléc */
+/* Fejléc stílusok */
 header {
-    background-color: #0073e6;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
+  background-color: #f7d6e0; /* Pasztell rózsaszín */
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid #e2b6c3; /* Halvány rózsaszín árnyalat */
 }
 
-/* Szekciók */
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 5px 0 0;
+}
+
+/* Szövegrészek */
+main {
+  padding: 20px;
+}
+
 section {
-    padding: 20px;
-    margin: 10px;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e3f4f1; /* Halvány pasztell zöld */
+  border: 1px solid #cde6df; /* Finom keret */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enyhe árnyék */
+}
+
+section h2 {
+  color: #5a92a5; /* Pasztell kék árnyalat */
+  text-align: center;
+  font-size: 1.8em;
+}
+
+section p,
+section ul {
+  font-size: 1em;
+  color: #444;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+/* Random user kép */
+#random-user {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#random-user img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #5a92a5; /* Pasztell kék */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Kapcsolatok szekció */
-#contact {
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+#contact ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
+#contact ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
 
+#contact a {
+  color: #5a92a5; /* Pasztell kék */
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Lábjegyzet */
+footer {
+  background-color: #f7d6e0; /* Pasztell rózsaszín */
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  border-top: 3px solid #e2b6c3; /* Halvány rózsaszín árnyalat */
+  font-size: 0.9em;
+}
+
+/* Mobilbarát stílusok */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  #random-user img {
+    width: 120px;
+    height: 120px;
+  }
+}
