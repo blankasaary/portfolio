@@ -1,0 +1,42 @@
+/* Alap stílusok */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fejléc */
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Szekciók */
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Projektek listája */
+#project-list {
+    list-style: none;
+    padding: 0;
+}
+
+    #project-list li {
+        background: #f4f4f4;
+        margin: 10px 0;
+        padding: 10px;
+        border-left: 4px solid #0073e6;
+    }
+
+/* Lábjegyzet */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+}
