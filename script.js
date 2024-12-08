@@ -1,13 +1,30 @@
-// Véletlenszerű felhasználó képének betöltése
-fetch('https://randomuser.me/api/')
-  .then(response => response.json())
-  .then(data => {
-    const user = data.results[0];
-    const userImage = document.createElement('img');
-    userImage.src = user.picture.large; // Nagy méretű kép
-    userImage.alt = `Véletlenszerű felhasználó: ${user.name.first} ${user.name.last}`;
+/ Kezeli a kép feltöltését és az előnézetet
+document.getElementById('image-upload').addEventListener('change', function (event) {
+  const file = event.target.files[0]; // A feltöltött fájl
+  const previewDiv = document.getElementById('image-preview'); // Előnézet helye
 
-    const randomUserDiv = document.getElementById('random-user');
-    randomUserDiv.appendChild(userImage);
-  })
-  .catch(error => console.error('Hiba a Random User API betöltésekor:', error));
+  // Ellenőrizzük, hogy egy fájl valóban feltöltésre került-e
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      // Töröljük az előző előnézet tartalmát
+      previewDiv.innerHTML = '';
+
+      // Hozzáadjuk a feltöltött kép előnézetét
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.alt = 'Feltöltött kép';
+      img.style.width = '150px'; // Méretezés
+      img.style.height = '150px'; // Méretezés
+      img.style.borderRadius = '50%'; // Kerekítés
+      img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)'; // Árnyék
+
+      previewDiv.appendChild(img);
+    };
+
+    reader.readAsDataURL(file); // Betölti a fájlt és elkészíti az előnézetet
+  } else {
+    previewDiv.innerHTML = '<p>Válassz egy képet a számítógépedről!</p>';
+  }
+});
