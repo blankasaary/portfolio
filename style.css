@@ -75,6 +75,16 @@ ul li {
   margin-bottom: 10px;
 }
 
+/* Kép stílusok */
+#random-user img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Lábjegyzet */
 footer {
   background-color: #ffcad4;
@@ -82,4 +92,3 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-
